@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="navbar">
+    <h1>Style Shop</h1>
+    <div class="cart-icon" onclick="toggleCart()">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
+  </header>
+
+  <!-- ── MAIN CONTENT (PRODUCT GRID) ── -->
+  <main class="container">
+    <h2>Featured Products</h2>
+    
+    <div class="product-grid" id="productGrid">
+      <!-- Products will be injected here by JavaScript -->
+    </div>
+  </main>
+
+  <!-- ── SLIDING CART PANEL ── -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-btn" onclick="toggleCart()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <!-- Cart items will be injected here -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="total-row">
+        <span>Total:</span>
+        <h3 id="cartTotal">₹0.00</h3>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
